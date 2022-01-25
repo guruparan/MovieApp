@@ -5,13 +5,14 @@ import {
     Image,
     ScrollView,
 } from 'react-native';
+import images from '../../../images';
 import { IMAGE_BASE_PATH } from '../../utils/Constants';
 import { getRatingBackgroundColor } from '../../utils/Utils';
 import styles from './MovieInfoViewStyles';
 
 const Rating = ({ rating, style }) => {
     return (
-        <View style={[style, { borderColor: getRatingBackgroundColor(rating)}]}>
+        <View style={[style, { borderColor: getRatingBackgroundColor(rating) }]}>
             <Text style={{ color: getRatingBackgroundColor(rating) }}>{rating}</Text>
         </View>
     );
@@ -25,17 +26,17 @@ const MovieInfoView = ({ movie }) => {
                     <Rating rating={movie.vote_average} style={styles.ratingContainer} />
                     <Image
                         style={styles.backdrop}
-                        source={{
+                        source={movie.backdrop_path ? {
                             uri: IMAGE_BASE_PATH + movie.backdrop_path,
-                        }}
+                        } : images.backdrop}
                         resizeMode={'cover'}
                     />
 
                     <Image
                         style={styles.poster}
-                        source={{
+                        source={movie.poster_path ? {
                             uri: IMAGE_BASE_PATH + movie.poster_path,
-                        }}
+                        } : images.poster}
                         resizeMode={'cover'}
                     />
 

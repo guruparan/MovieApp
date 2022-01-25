@@ -9,21 +9,25 @@ const HomeTabs = createMaterialBottomTabNavigator();
 
 const HomeScreen = () => {
     return (
-        <HomeTabs.Navigator>
+        <HomeTabs.Navigator
+        
+            activeColor="#D3D3D3"
+            barStyle={{ backgroundColor: 'black' }}>
+            <HomeTabs.Screen
+                name="Popular"
+                component={PopularMovieScreen}
+                options={{
+
+                    tabBarIcon: ({ color }) => (
+                        <FontAwesome name="star" color={color} size={26} />
+                    )
+                }} />
             <HomeTabs.Screen
                 name="Latest"
                 component={LatestMovieScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="movie" color={color} size={26} />
-                    )
-                }} />
-            <HomeTabs.Screen
-                name="Popular"
-                component={PopularMovieScreen}
-                options={{
-                    tabBarIcon: ({ color }) => (
-                        <FontAwesome name="star" color={color} size={26} />
                     )
                 }} />
         </HomeTabs.Navigator>

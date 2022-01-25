@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './MoviesListItemStyles';
 import { IMAGE_BASE_PATH } from '../../utils/Constants';
 import { getRatingBackgroundColor } from '../../utils/Utils';
+import images from '../../../images';
 
 const MovieListItem = ({ movie, onclick }) => {
 
@@ -10,9 +11,9 @@ const MovieListItem = ({ movie, onclick }) => {
         <TouchableOpacity style={styles.container} key={movie.id} onPress={onclick}>
             <Image
                 style={styles.image}
-                source={{
+                source={movie.poster_path ? {
                     uri: IMAGE_BASE_PATH + movie.poster_path,
-                }}
+                } : images.poster}
             />
             <View
                 style={[styles.ratingContainer, { borderColor: getRatingBackgroundColor(movie.vote_average) }]}>
@@ -25,8 +26,8 @@ const MovieListItem = ({ movie, onclick }) => {
                     {movie.title}{movie.release_date ? ` (${movie.release_date.split('-')[0]})` : ""}
                 </Text>
 
-                <Text style={{marginTop:10,fontSize:14}}>
-                   Released on {movie.release_date}
+                <Text style={{ marginTop: 10, fontSize: 14 }}>
+                    Released on {movie.release_date}
                 </Text>
             </View>
         </TouchableOpacity>

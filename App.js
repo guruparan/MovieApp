@@ -13,10 +13,20 @@ const App = () => {
     <SafeAreaView style={{ flex: 1 }} edges={['top', 'left', 'right']}>
       <NavigationContainer>
         <MainStack.Navigator>
-          <MainStack.Screen name="Home" component={HomeScreen} options={{
-            headerShown: false
-          }} />
-          <MainStack.Screen name="MovieInfo" component={MovieInfoScreen} />
+          <MainStack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              headerShown: false
+            }}
+          />
+          <MainStack.Screen
+            name="MovieInfo"
+            component={MovieInfoScreen}
+            options={{
+              title:''
+            }}
+          />
         </MainStack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
