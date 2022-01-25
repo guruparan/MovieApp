@@ -22,7 +22,7 @@ const MovieListItem = ({ movie, onclick }) => {
                 </Text>
             </View>
             <View style={styles.detailContainer}>
-                <Text style={styles.title}>
+                <Text style={styles.title} testID='movieTitle'>
                     {movie.title}{movie.release_date ? ` (${movie.release_date.split('-')[0]})` : ""}
                 </Text>
 

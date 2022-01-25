@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
         height: 80,
         marginRight: 10,
         borderRadius: 5,
-        borderBottomEndRadius: 30,
-        borderBottomStartRadius: 30,
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30,
     },
     detailContainer: {
         width: '80%'

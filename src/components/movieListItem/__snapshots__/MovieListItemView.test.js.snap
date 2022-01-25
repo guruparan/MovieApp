@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#D5D3D3",
+      "borderBottomLeftRadius": 40,
+      "borderRadius": 5,
+      "flexDirection": "row",
+      "marginHorizontal": 10,
+      "marginVertical": 8,
+      "opacity": 1,
+      "padding": 10,
+      "width": "95%",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../images/poster.png",
+      }
+    }
+    style={
+      Object {
+        "borderBottomLeftRadius": 30,
+        "borderBottomRightRadius": 30,
+        "borderRadius": 5,
+        "height": 80,
+        "marginRight": 10,
+        "width": 58,
+      }
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "borderBottomWidth": 5,
+          "borderRadius": 15,
+          "borderTopWidth": 0,
+          "bottom": -5,
+          "height": 30,
+          "justifyContent": "center",
+          "left": 25,
+          "position": "absolute",
+          "width": 30,
+        },
+        Object {
+          "borderColor": "grey",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "grey",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "width": "80%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 18,
+          "fontWeight": "bold",
+        }
+      }
+      testID="movieTitle"
+    >
+       (2020)
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 14,
+          "marginTop": 10,
+        }
+      }
+    >
+      Released on 
+      2020-01-01
+    </Text>
+  </View>
+</View>
+`;
